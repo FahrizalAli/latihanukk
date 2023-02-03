@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-primary">
-    <form action="login.php" method="POST">
+    <form action="register-act.php" method="POST">
         <div class="card col-4 offset-4 mt-5">
             <div class="card-header text-center">
                 <h2>Register</h2>

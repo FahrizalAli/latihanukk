@@ -43,7 +43,6 @@
             </div>
         </div>
     </nav>
-
     <table class="table">
         <thead>
             <tr>
