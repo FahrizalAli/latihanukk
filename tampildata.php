@@ -62,8 +62,9 @@
                         <td><?php echo $nomor++ ?></td>
                         <td><?php echo $d['username'] ?></td>
                         <td><?php echo $d['level'] ?></td>
-                        <td><a class="btn btn-primary">EDIT</a></td>
-                        <td><a href="delete.php?id=<?php echo $d['id']?>"  class="btn btn-success">DELETE</a></td>
+                        <td><a href="edit.php" class="btn btn-primary">EDIT</a></td>
+                        <td><a href="delete.php?id=<?php echo $d['id']?>"  
+                        class="btn btn-success">DELETE</a></td>
                     </tr>
                 <?php
                 }
