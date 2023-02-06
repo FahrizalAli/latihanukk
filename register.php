@@ -18,11 +18,11 @@
             <div class="card-body">
                 <input class="form-control mb-3" type="text" name="username" placeholder="Username">
                 <input class="form-control mb-3" type="password" name="password" placeholder="Password">
-                <select class="form-select mb-3" name="level" id="">
+                <select class="form-select mb-3" name="level">
                     <option value="admin">Admin</option>
                     <option value="user">User</option>
                 </select>
-                <button type="submit" class="btn btn-primary col-12">Login</button>
+                <button type="submit" class="btn btn-primary col-12">register</button>
             </div>
         </div>
     </form>

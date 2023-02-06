@@ -18,9 +18,9 @@
                 if (isset($_GET['pesan'])) {
                     if ($_GET['pesan'] == "failed") {
                         echo '<div class="alert alert-danger">gagal login</div>';
-                    } elseif ($_GET['pesan'] == "logout"){
+                    } elseif ($_GET['pesan'] == "logout") {
                         echo '<div class="alert alert-success">Logout Berhasil</div>';
-                    } elseif($_GET['pesan'] == "belum_login"){
+                    } elseif ($_GET['pesan'] == "belum_login") {
                         echo '<div class="alert alert-danger">Silahkan Login</div>';
                     }
                 }

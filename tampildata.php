@@ -17,10 +17,8 @@
     }
 
     ?>
-
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,34 +41,36 @@
             </div>
         </div>
     </nav>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Username</th>
-                <th scope="col">Level</th>
-                <th scope="col" colspan="2">Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php 
-            include "koneksi.php";
-            $nomor = 1;
-            $data = mysqli_query($koneksi,"SELECT * FROM t_login");
-            while($d = mysqli_fetch_array($data)){
-            ?>
-            <tr>
-                <td><?php echo $nomor++ ?></td>
-                <td><?php echo $d['username'] ?></td>
-                <td><?php echo $d['level'] ?></td>
-                <td><a class="btn btn-primary" href="">EDIT</a></td>
-                <td><a class="btn btn-success" href="">DELETE</a></td>
-            </tr>
-            <?php 
-            }
-            ?>
-        </tbody>
-    </table>
+    <div class="container">
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Level</th>
+                    <th scope="col" colspan="2">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                include "koneksi.php";
+                $nomor = 1;
+                $data = mysqli_query($koneksi, "SELECT * FROM t_login");
+                while ($d = mysqli_fetch_array($data)) {
+                ?>
+                    <tr>
+                        <td><?php echo $nomor++ ?></td>
+                        <td><?php echo $d['username'] ?></td>
+                        <td><?php echo $d['level'] ?></td>
+                        <td><a class="btn btn-primary">EDIT</a></td>
+                        <td><a href="delete.php?id=<?php echo $d['id']?>"  class="btn btn-success">DELETE</a></td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
 
 
 </body>
